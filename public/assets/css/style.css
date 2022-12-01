@@ -1,0 +1,830 @@
+@font-face {
+  font-family: "Chillax";
+  src: url("../font/Chillax-Regular.otf"), url("../font/Chillax-Medium.otf"),
+    url("../font/Chillax-Bold.otf") format("opentype");
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+/* navbar */
+.nav-link {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+
+  color: #ffffff;
+}
+
+.nav-link:hover {
+  color: #456fe8;
+}
+
+.navbar {
+  background-color: #030910;
+  color: #ffffff;
+}
+
+#jumbotron {
+  padding-top: 40px;
+  height: 500px;
+  background-color: #030910;
+}
+
+.text-header {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.text-header h1 {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 110%;
+  /* identical to box height, or 53px */
+
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+}
+
+.text-header h1:nth-child(1) {
+  margin-bottom: 28px;
+}
+
+.text-header h5 {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  /* or 28px */
+
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+.swiper {
+  width: 380px;
+  height: 400px;
+  margin-top: 60px;
+}
+
+.swiper-slide {
+  background: no-repeat center fixed;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill {
+  width: 100%;
+  padding: 32px 36px;
+  background: rgba(255, 255, 255, 0.2);
+
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  display: inline-block;
+  align-self: flex-end;
+}
+
+.skill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(
+    122.74deg,
+    #ffffff 26.42%,
+    rgba(255, 255, 255, 0) 51.7%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.skill p {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+
+  color: #ffffff;
+  margin: 0;
+}
+
+.skill .cat-skill {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+
+  color: #ffffff;
+
+  position: absolute;
+  top: 0;
+  margin-top: -16px;
+  margin-left: -12px;
+}
+
+.content-swipe {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px;
+  gap: 4px;
+
+  background: #ffffff !important;
+  border-radius: 24px;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.content-swipe p {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+
+  color: #000000;
+  margin: 0 !important;
+}
+
+.gradient-blue {
+  background: linear-gradient(90deg, #456fe8 0%, #19b0ec 100%);
+  border-radius: 20px;
+}
+
+.gradient-red {
+  background: linear-gradient(90deg, #ff0f7b 0%, #f89b29 100%);
+  border-radius: 20px;
+}
+
+.gradient-green {
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  border-radius: 20px;
+}
+
+/* quote */
+#quote {
+  padding: 280px 0 80px 0;
+  background-color: #050e18;
+}
+
+#quote h1 {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 100px;
+  line-height: 110%;
+  /* identical to box height, or 110px */
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+}
+
+/* project */
+#project {
+  padding-top: 60px;
+  background-color: #030910;
+}
+
+.text-title {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
+  /* or 38px */
+
+  color: #ffffff;
+  margin-top: 28px;
+}
+
+.title {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 110%;
+  /* or 44px */
+
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+}
+
+.sec-header-project {
+  margin-bottom: 72px;
+}
+
+.banner-project {
+  object-fit: cover;
+  width: 100%;
+}
+
+.banner-project:hover {
+  height: 110%;
+  margin-top: -10%;
+  transition: 0.5s;
+  box-shadow: 0px 4px 60px rgba(61, 99, 212, 0.5);
+}
+
+#project .row,
+#project .col {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* testimonials */
+.sec-header-testimonial {
+  margin-bottom: 40px;
+}
+
+#testimonial {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #050e18;
+}
+
+.card-testimonial {
+  width: 380px;
+  height: 190px;
+  padding: 44px 16px 24px 16px;
+  background: #ffffff;
+  border-radius: 16px;
+  position: relative;
+}
+
+.card-testimonial .img-testimonial {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  object-fit: cover;
+  position: absolute;
+  left: 32px;
+  top: -30px;
+}
+
+.card-testimonial p {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  /* or 20px */
+
+  color: #000000;
+  margin-bottom: 21px;
+}
+
+.card-testimonial h5 {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+
+  color: #000000;
+}
+
+/* footer */
+#footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #030910;
+}
+
+.sec-footer h3 {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  /* identical to box height, or 29px */
+
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.sec-footer h5 {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  /* identical to box height, or 28px */
+
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.sec-footer h5 span {
+  text-decoration-line: underline;
+}
+
+.sec-footer .link-portfolio {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px;
+}
+
+/*? article page */
+/* jumbotron */
+.hide-focus:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #ced4da !important;
+}
+
+.form-control {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+
+  color: #616161;
+  padding: 16px;
+}
+
+.btn-search {
+  background: linear-gradient(90deg, #456fe8 0%, #19b0ec 100%);
+  border-radius: 32px;
+  padding: 16px 24px;
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.sec-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 20px;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+/* article today */
+#article-today {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  background-color: #050e18;
+}
+
+.btn-read {
+  background: linear-gradient(90deg, #456fe8 0%, #19b0ec 100%);
+  border-radius: 32px;
+  padding: 16px 24px;
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+
+  text-align: center;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-read:hover {
+  color: #ffffff;
+}
+
+.card-body-highlight .card-title h5 {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
+  /* or 38px */
+
+  color: #ffffff;
+  margin: 44px 0 20px 0;
+}
+
+.card-body-highlight .card-text p {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  /* or 28px */
+
+  color: #c5c4c4;
+  margin-bottom: 44px;
+}
+
+.card-img-highlight {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.img-article {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cat-article {
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  border-radius: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+}
+
+.cat-article p {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+
+  color: #ffffff;
+  margin-bottom: 0 !important;
+}
+
+.card-body-right .card-title h5 {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  /* or 29px */
+
+  color: #ffffff;
+  margin: 12px 0 40px 0;
+}
+
+.cat-article-right {
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  border-radius: 20px;
+  padding: 8px 12px;
+  width: fit-content;
+}
+
+.cat-article-right p {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+
+  color: #ffffff;
+  margin-bottom: 0 !important;
+}
+
+/* all article */
+#all-article {
+  padding-bottom: 100px;
+  background-color: #050e18;
+}
+
+.sec-all-article .text-title {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 110%;
+  /* identical to box height, or 44px */
+
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 72px;
+}
+
+.card-article-all {
+  margin-bottom: 60px;
+}
+
+.card-img-all {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cat-article-all {
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  border-radius: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+}
+
+.cat-article-all p {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  /* identical to box height, or 20px */
+
+  color: #ffffff;
+  margin-bottom: 0 !important;
+}
+
+.card-body-all .card-title h5 {
+  font-family: "Chillax";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  /* or 29px */
+
+  color: #ffffff;
+  margin: 32px 0 40px 0;
+}
+
+/* responsive */
+/* screen xl */
+@media (max-width: 1140px) {
+  .navbar-toggler {
+    border: 1px solid #fff !important;
+  }
+
+  .navbar-toggler span {
+    color: #fff !important;
+  }
+
+  #quote h1 {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 110%;
+    /* identical to box height, or 110px */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: #ffffff;
+  }
+
+  .splide__list li {
+    margin: 0 20px !important;
+  }
+}
+
+/* screen lg */
+@media (max-width: 992px) {
+  #quote {
+    padding: 300px 0 80px 0;
+    background-color: #050e18;
+  }
+
+  .splide__list li {
+    margin: 0 40px !important;
+  }
+}
+
+/* screen md */
+@media (max-width: 768px) {
+  #jumbotron {
+    padding-top: 40px;
+    height: 600px;
+    background-color: #030910;
+  }
+
+  #quote {
+    padding: 220px 0 80px 0;
+    background-color: #050e18;
+  }
+
+  #quote h1 {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 110%;
+    /* identical to box height, or 110px */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: #ffffff;
+  }
+
+  .img-quote {
+    width: 210px;
+    height: 70px;
+    object-fit: cover;
+  }
+
+  .splide__list li {
+    margin: 0 100px !important;
+  }
+}
+
+/* screen sm */
+@media (max-width: 576px) {
+  #jumbotron {
+    padding-top: 40px;
+    height: 500px;
+    background-color: #030910;
+  }
+
+  .img-header {
+    width: 130px;
+    height: 52px;
+    object-fit: cover;
+  }
+
+  .text-header h1 {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 110%;
+    /* identical to box height, or 53px */
+
+    letter-spacing: 0.02em;
+
+    color: #ffffff;
+  }
+
+  .text-header h1:nth-child(1) {
+    margin-bottom: 20px;
+  }
+
+  .text-header h5 {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 28px */
+
+    color: #ffffff;
+    margin-top: 40px;
+  }
+
+  .text-header {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .swiper {
+    width: 320px;
+    height: 336px;
+    margin-top: 60px;
+  }
+
+  #quote {
+    padding: 180px 0 80px 0;
+    background-color: #050e18;
+  }
+
+  #quote h1 {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 110%;
+    /* identical to box height, or 110px */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: #ffffff;
+  }
+
+  .img-quote {
+    width: 180px;
+    height: 60px;
+    object-fit: cover;
+  }
+
+  .text-title {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    /* identical to box height, or 28px */
+
+    color: #ffffff;
+    margin-top: 20px;
+  }
+
+  .title {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* identical to box height, or 29px */
+
+    color: #ffffff;
+  }
+
+  .img-project {
+    width: 124px;
+    height: 50px;
+    object-fit: cover;
+  }
+
+  .splide__list li {
+    margin: 0 130px !important;
+  }
+}
+
+/* screen xs */
+@media (max-width: 375px) {
+  /* header text */
+  /* card skill */
+  /* text header */
+  /* testimonial */
+  /* footer */
+
+  .card-testimonial {
+    width: 320px;
+    height: 130px;
+    padding: 44px 16px 24px 16px;
+    background: #ffffff;
+    border-radius: 16px;
+    position: relative;
+  }
+
+  .card-testimonial .img-testimonial {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    object-fit: cover;
+    position: absolute;
+    left: 32px;
+    top: -30px;
+  }
+
+  .card-testimonial p {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    /* or 20px */
+
+    color: #000000;
+    margin-bottom: 21px;
+  }
+
+  .card-testimonial h5 {
+    font-family: "Chillax";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 140%;
+    /* identical to box height, or 20px */
+
+    color: #000000;
+  }
+}

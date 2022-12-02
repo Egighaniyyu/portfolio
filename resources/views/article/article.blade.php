@@ -3,7 +3,8 @@
 @section('title' , 'Article')
 
 @push('top-page-scripts')
-
+<!-- iconify -->
+<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
 @endpush
 
 @section('content')
@@ -43,12 +44,13 @@
     </div>
     <div class="container">
         <div class="row">
+            {{-- highlight --}}
             <div class="col-12 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div class="card-article">
                     <div class="card-img-highlight">
                         <img src="{{$dataarticle['items'][0]['thumbnail']}}" alt="img article" class="img-article">
                         <div class="cat-article">
-                            <p>{{$dataarticle['items'][0]['categories'][0]}}</p>
+                            <p>{{Str::ucfirst(str_replace('-',' ',$dataarticle['items'][0]['categories'][0]))}}</p>
                         </div>
                     </div>
                     <div class="card-body-highlight">
@@ -63,67 +65,33 @@
                     <a href="{{$dataarticle['items'][0]['link']}}" class="btn-read" target="_blank">Explore now</a>
                 </div>
             </div>
+
+            {{-- right section --}}
             <div class="col-12 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                @foreach ($dataarticle['items'] as $item)
+                @if ($loop->index >= 0)
                 <div class="card-article mb-5">
                     <div class="row">
                         <div class="col col-md-6">
                             <div class="card-img-right">
-                                <img src="assets/images/img-article-2.png" alt="img article" class="img-article">
+                                <img src="{{$item['thumbnail']}}" alt="img article" class="img-article">
                             </div>
                         </div>
                         <div class="col col-md-6">
                             <div class="card-body-right">
                                 <div class="cat-article-right">
-                                    <p>Case study</p>
+                                    <p>{{Str::ucfirst(str_replace('-',' ',$item['categories'][0]))}}</p>
                                 </div>
                                 <div class="card-title">
-                                    <h5>Know your user better with User Persona</h5>
+                                    <h5>{{$item['title']}}</h5>
                                 </div>
                             </div>
-                            <a href="#" class="btn-read">Explore now</a>
+                            <a href="{{$item['link']}}" class="btn-read" target="_blank">Explore now</a>
                         </div>
                     </div>
                 </div>
-                <div class="card-article mb-5">
-                    <div class="row">
-                        <div class="col col-md-6">
-                            <div class="card-img-right">
-                                <img src="assets/images/img-article-2.png" alt="img article" class="img-article">
-                            </div>
-                        </div>
-                        <div class="col col-md-6">
-                            <div class="card-body-right">
-                                <div class="cat-article-right">
-                                    <p>Case study</p>
-                                </div>
-                                <div class="card-title">
-                                    <h5>Know your user better with User Persona</h5>
-                                </div>
-                            </div>
-                            <a href="#" class="btn-read">Explore now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-article mb-5">
-                    <div class="row">
-                        <div class="col col-md-6">
-                            <div class="card-img-right">
-                                <img src="assets/images/img-article-2.png" alt="img article" class="img-article">
-                            </div>
-                        </div>
-                        <div class="col col-md-6">
-                            <div class="card-body-right">
-                                <div class="cat-article-right">
-                                    <p>Case study</p>
-                                </div>
-                                <div class="card-title">
-                                    <h5>Know your user better with User Persona</h5>
-                                </div>
-                            </div>
-                            <a href="#" class="btn-read">Explore now</a>
-                        </div>
-                    </div>
-                </div>
+                @endif
+                @endforeach
             </div>
         </div>
 </section>
@@ -134,102 +102,24 @@
         <div class="sec-all-article">
             <h3 class="text-title text-center">Article of the day</h3>
             <div class="row">
+                @foreach ($dataarticle['items'] as $item)
                 <div class="col-12 col-lg-4 col-md-6 col-sm-12 col-xs-12">
                     <div class="card-article-all">
                         <div class="card-img-all">
-                            <img src="assets/images/img-article-2.png" alt="img article" class="img-article">
+                            <img src="{{$item['thumbnail']}}" alt="img article" class="img-article">
                             <div class="cat-article-all">
-                                <p>Case study</p>
+                                <p>{{Str::ucfirst(str_replace('-',' ',$item['categories'][0]))}}</p>
                             </div>
                         </div>
                         <div class="card-body-all">
                             <div class="card-title">
-                                <h5>Know your user better with User Persona</h5>
+                                <h5>{{$item['title']}}</h5>
                             </div>
                         </div>
-                        <a href="#" class="btn-read">Explore now</a>
+                        <a href="{{$item['link']}}" class="btn-read" target="_blank">Explore now</a>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card-article-all">
-                        <div class="card-img-all">
-                            <img src="assets/images/img-article-2.png" alt="img article" class="img-article">
-                            <div class="cat-article-all">
-                                <p>Case study</p>
-                            </div>
-                        </div>
-                        <div class="card-body-all">
-                            <div class="card-title">
-                                <h5>Know your user better with User Persona</h5>
-                            </div>
-                        </div>
-                        <a href="#" class="btn-read">Explore now</a>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card-article-all">
-                        <div class="card-img-all">
-                            <img src="assets/images/img-article-2.png" alt="img article" class="img-article">
-                            <div class="cat-article-all">
-                                <p>Case study</p>
-                            </div>
-                        </div>
-                        <div class="card-body-all">
-                            <div class="card-title">
-                                <h5>Know your user better with User Persona</h5>
-                            </div>
-                        </div>
-                        <a href="#" class="btn-read">Explore now</a>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card-article-all">
-                        <div class="card-img-all">
-                            <img src="assets/images/img-article-2.png" alt="img article" class="img-article">
-                            <div class="cat-article-all">
-                                <p>Case study</p>
-                            </div>
-                        </div>
-                        <div class="card-body-all">
-                            <div class="card-title">
-                                <h5>Know your user better with User Persona</h5>
-                            </div>
-                        </div>
-                        <a href="#" class="btn-read">Explore now</a>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card-article-all">
-                        <div class="card-img-all">
-                            <img src="assets/images/img-article-2.png" alt="img article" class="img-article">
-                            <div class="cat-article-all">
-                                <p>Case study</p>
-                            </div>
-                        </div>
-                        <div class="card-body-all">
-                            <div class="card-title">
-                                <h5>Know your user better with User Persona</h5>
-                            </div>
-                        </div>
-                        <a href="#" class="btn-read">Explore now</a>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card-article-all">
-                        <div class="card-img-all">
-                            <img src="assets/images/img-article-2.png" alt="img article" class="img-article">
-                            <div class="cat-article-all">
-                                <p>Case study</p>
-                            </div>
-                        </div>
-                        <div class="card-body-all">
-                            <div class="card-title">
-                                <h5>Know your user better with User Persona</h5>
-                            </div>
-                        </div>
-                        <a href="#" class="btn-read">Explore now</a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

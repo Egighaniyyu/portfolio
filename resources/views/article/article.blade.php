@@ -46,22 +46,21 @@
             <div class="col-12 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div class="card-article">
                     <div class="card-img-highlight">
-                        <img src="assets/images/img-article-1.png" alt="img article" class="img-article">
+                        <img src="{{$dataarticle['items'][0]['thumbnail']}}" alt="img article" class="img-article">
                         <div class="cat-article">
-                            <p>Case study</p>
+                            <p>{{$dataarticle['items'][0]['categories'][0]}}</p>
                         </div>
                     </div>
                     <div class="card-body-highlight">
                         <div class="card-title">
-                            <h5>Know your user better with User Persona</h5>
+                            <h5>{{$dataarticle['items'][0]['title']}}</h5>
                         </div>
                         <div class="card-text">
-                            <p>Pengembangan aplikasi atau website tentu tidak hanya memperhatikan aspek antarmuka
-                                yang baik namun juga harus disertai dengan pengalaman menyenangkan dari pengguna.
-                                Untuk mencapai hal tersebut tentu kita butuh pedoman salah satunya User Persona.</p>
+                            <p>{{Str::limit(strip_tags($dataarticle['items'][0]['description']), 400)}}
+                            </p>
                         </div>
                     </div>
-                    <a href="#" class="btn-read">Explore now</a>
+                    <a href="{{$dataarticle['items'][0]['link']}}" class="btn-read" target="_blank">Explore now</a>
                 </div>
             </div>
             <div class="col-12 col-lg-6 col-md-12 col-sm-12 col-xs-12">

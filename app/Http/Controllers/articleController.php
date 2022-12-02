@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class articleController extends Controller
 {
@@ -13,7 +14,10 @@ class articleController extends Controller
      */
     public function index()
     {
-        return view('article.article');
+        $resarticle = Http::get('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@egighaniyyu');
+        $dataarticle = $resarticle->json();
+        return view('article.article', compact('dataarticle'));
+        // dd($dataarticle);
     }
 
     /**
